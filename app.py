@@ -14,19 +14,6 @@ from pyairtable import Api
 import time
 import uuid
 
-st.markdown(
-    """
-    <style>
-    .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
-    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
-    .viewerBadge_text__1JaDK {
-        display: none;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 # Add these to your existing environment variable loading
 BASE_ID = os.environ.get('BASE_ID')
 USER_TABLE_NAME = 'Users'
@@ -393,6 +380,18 @@ def login():
 
 
 def main():
+    st.markdown(
+    """
+    <style>
+    .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
+    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
+    .viewerBadge_text__1JaDK {
+        display: none;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
     # Initialize session state
     if 'logged_in' not in st.session_state:
         st.session_state['logged_in'] = False
