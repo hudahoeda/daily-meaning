@@ -324,8 +324,8 @@ def load_chat_screen(assistant_id, assistant_title):
     else:
         uploaded_file = None
 
-    st.title(assistant_title if assistant_title else "")
-    st.write(f"Halo, bisa perkenalkan namamu?")
+    st.text(assistant_title if assistant_title else "")
+    st.write(f"Hello how can I help you?")
     user_msg = st.chat_input(
         "Message", on_submit=disable_form, disabled=st.session_state.in_progress
     )
@@ -358,7 +358,7 @@ def login():
     """,
     unsafe_allow_html=True
     )
-    st.title("💬 RevoU AI Coach")
+    st.text("Daily Meaning Communication Skills Test")
     st.text("Enter your credential")
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
