@@ -383,15 +383,13 @@ def main():
     st.markdown(
     """
     <style>
-    .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
-    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
-    .viewerBadge_text__1JaDK {
-        display: none;
+    .css-1rs6os.edgvbvh3 { 
+        visibility: hidden; 
     }
     </style>
     """,
-    unsafe_allow_html=True
-    )
+    unsafe_allow_html=True)
+    
     # Initialize session state
     if 'logged_in' not in st.session_state:
         st.session_state['logged_in'] = False
